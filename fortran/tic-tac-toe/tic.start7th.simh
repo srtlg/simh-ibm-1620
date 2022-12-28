@@ -1,0 +1,36 @@
+;
+; simh> DO tic.start7th.simh 
+;
+; interrupt interpreter with C-E
+;
+! rm tic.start7th.f.pt tic.start7th.run1.pt tic.start7th.run2.pt
+! python ../../util/asc2pt.py tic.start7th.f tic.start7th.f.pt
+attach ptr ../../dl/DaveW_paper_tapes/FO005.PT
+boot ptr
+d sw1 1
+; print listing 1/0:
+d sw4 0
+d arstop 0 
+attach ptr tic.start7th.f.pt
+go
+;quit
+;reset
+attach ptr ../../dl/DaveW_paper_tapes/FO003AP.PT
+attach ptp tic.start7th.run1.pt
+boot ptr
+d sw1 1
+d sw4 1
+d arstop 0 
+attach ptr tic.start7th.f.pt
+go
+d sw1 0
+go
+detach ptp
+attach ptr tic.start7th.run1.pt
+attach ptp tic.start7th.run2.pt
+go
+detach ptp
+detach ptr
+reset
+attach ptr tic.start7th.run2.pt
+boot ptr
