@@ -1,0 +1,15 @@
+! rm -f bottles-916.sps.pt bottles-916.text.pt
+! python ../../util/asc2pt.py bottles-916.sps bottles-916.sps.pt
+attach ptr ../../dl/DaveW_paper_tapes/SP021A.PT
+boot ptr
+;
+; first pass
+; input from tape sw1=1
+d sw1 1 
+d arstop 0
+attach ptr bottles-916.sps.pt
+attach ptp bottles-916.text.pt
+go
+;
+; second pass
+attach ptr bottles-916.sps.pt

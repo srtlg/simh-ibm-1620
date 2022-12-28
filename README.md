@@ -10,6 +10,9 @@ example](https://github.com/mdoege/IBM1620-Baseball) on Github.
 - [programs in SPS](sps/README.md)
 - [programs in FORTRAN](fortran/README.md)
 
+Most of these directory contain a .simh-file containing the commands for
+simh-i1620.
+
 
 ## Where to start
 
@@ -31,6 +34,9 @@ programming manuals [^SPS][^FORTRAN].
 
 
 ## Where to start with the treasure trove of 1620.zip
+
+On Bitsavers there is the innocent looking [1620.zip](http://www.bitsavers.org/bits/IBM/1620/1620.zip)
+containing most available compilers.
 
 
 # Bibliography

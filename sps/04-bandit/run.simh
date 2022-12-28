@@ -1,0 +1,16 @@
+! rm -f bandit.text.pt bandit.sps
+! python ../../util/pt2asc.py ../../dl/DaveW_paper_tapes/BANDIT.AL bandit.sps
+attach ptr ../../dl/DaveW_paper_tapes/SP021A.PT
+boot ptr
+d sw1 1
+d arstop 0
+attach ptr ../../dl/DaveW_paper_tapes/BANDIT.AL
+attach ptp bandit.text.pt
+go
+attach ptr ../../dl/DaveW_paper_tapes/BANDIT.AL
+go
+detach ptp
+detach ptr
+reset
+attach ptr bandit.text.pt
+boot ptr

@@ -3,7 +3,7 @@
 ;
 ; interrupt interpreter with C-E
 ;
-! rm tic.start7th.f.pt tic.start7th.run1.pt tic.start7th.run2.pt
+! rm -f tic.start7th.f.pt tic.start7th.run1.pt tic.start7th.run2.pt
 ! python ../../util/asc2pt.py tic.start7th.f tic.start7th.f.pt
 attach ptr ../../dl/DaveW_paper_tapes/FO005.PT
 boot ptr
