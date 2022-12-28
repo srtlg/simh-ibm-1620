@@ -1,0 +1,7 @@
+attach ptr FO005.PT
+boot ptr
+d sw1 1
+d sw4 1
+d arstop 0
+attach ptr NON65.PT
+go
