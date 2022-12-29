@@ -74,7 +74,7 @@ _table = (
 (0x38, 'OC8    ', '0-8    ', 'Y'),
 (0x29, 'O81    ', '0-9    ', 'Z'),
 (0x20, '0      ', '0      ', '0'),
-(0x20, '0      ', '12-0   ', '0'),
+# (0x20, '0      ', '12-0   ', '0'),
 (0x01, '1      ', '1      ', '1'),
 (0x02, '2      ', '2      ', '2'),
 (0x13, 'C21    ', '3      ', '3'),
@@ -85,10 +85,13 @@ _table = (
 (0x08, '8      ', '8      ', '8'),
 (0x19, 'C81    ', '9      ', '9'),
 (0x2A, 'O82    ', '0-2-8  ', '#'),
+# the following may not be allowed in alphameric mode
 (0x4A, 'X82    ', '11-2-8 ', '"'),
-(0x7A, 'XOC82  ', '12-2-8 ', '"'),
+(0x7A, 'XOC82  ', '12-2-8 ', "'"),
 (0x2F, 'O8421  ', '0-7-8  ', '%'),
 (0x4F, 'X8421  ', '11-7-8 ', '&'))
 
 Table4 = dict((x[0], x[3]) for x in _table)
+assert len(Table4) == len(_table), "{} != {}".format(len(Table4), len(_table))
 Table5 = dict((x[3], x[0]) for x in _table)
+assert len(Table5) == len(_table), "{} != {}".format(len(Table5), len(_table))
