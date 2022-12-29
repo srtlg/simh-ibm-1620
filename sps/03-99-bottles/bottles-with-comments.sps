@@ -9,10 +9,11 @@
      *
      * THIS CODE HERE CAN BE ASSEMBLED WITH TAPE SP021 FOUND ON BITSAVERS
      *
-     * IF YOU'RE GOING TO RUN THIS ON THE CADET, YOU NEED TO HAVE AT LEAST
+     * IF YOU,RE GOING TO RUN THIS ON THE CADET, YOU NEED TO HAVE AT LEAST
      * THE ADDITION TABLES LOADED.  INDIRECT ADDRESSING IS USEFUL, BUT NOT
      * ABSOLUTELY NECESSARY (SEE NOTE BELOW).
      *
+           DORG00402
      START RCTY                ,,, RETURN CARRIAGE
            BTM DBEERS,*+12     ,,, SHOW COUNT
            WATYMSG2            ,,, OF BEER ON...
@@ -43,7 +44,7 @@
      DBEERSCM  BEERS,10        ,,, DISPLAY BOTTLES
            BNL DBEER2          ,,, 10 OR MORE
            WNTYBEERS           ,,, 1 DIGIT
-           CM  BEERS,1         ,,, JUST 1?
+           CM  BEERS,1         ,,, JUST 1 
            BNE DBEERS4         ,,, NO, *BOTTLES*
            WATYBTL             ,,, SAY *BOTTLE*
            B7  -DBRET          ,,, EXIT
@@ -58,3 +59,4 @@
      MSG4  DAC 10, OF BEER.@
      MSG6  DAC 32,TAKE ONE DOWN, PASS IT AROUND -@
      MSG8  DAC 14,NO MORE BEER.@
+           DENDSTART

@@ -1,0 +1,19 @@
+! rm -f bottles-with-comments.sps.pt bottles-with-comments.text.pt
+! python ../../util/asc2pt.py bottles-with-comments.sps bottles-with-comments.sps.pt
+attach ptr ../../dl/DaveW_paper_tapes/SP021A.PT
+boot ptr
+;
+; first pass
+; input from tape sw1=1
+d sw1 1 
+d arstop 0
+attach ptr bottles-with-comments.sps.pt
+attach ptp bottles-with-comments.text.pt
+go
+;
+; second pass
+attach ptr bottles-with-comments.sps.pt
+go
+detach ptr
+detach ptp
+reset
