@@ -13,7 +13,6 @@
      * THE ADDITION TABLES LOADED.  INDIRECT ADDRESSING IS USEFUL, BUT NOT
      * ABSOLUTELY NECESSARY (SEE NOTE BELOW).
      *
-           DORG00402
      START RCTY                ,,, RETURN CARRIAGE
            BTM DBEERS,*+12     ,,, SHOW COUNT
            WATYMSG2            ,,, OF BEER ON...
