@@ -13,36 +13,28 @@
            BTM  DBEERS,*+12
            WATY MSG2
            RCTY 
-           B7   START
+           B    START
      EMPTY WATY MSG8
            RCTY 
-           H
-           B7   EMPTY
+           H    ,,,
+           B    EMPTY
      DBRET DC  5,0
      DBEERSCM  BEERS,10
            BNL DBEER2
            WNTYBEERS
            CM  BEERS,1
-           BNE DBEERS4
+           BNE DBEER4
            WATYBTL
-           B7  -DBRET
+           B   -DBRET
      DBEER2WNTYBEERS-1
      DBEER4WATYBTLS
-           B7  -DBRET
+           B   -DBRET
      BEERS DC  5,99
            DC  1,@
-     BTLS  DAC 8, BOTTLES
-           DAC 1,@
+     BTLS  DAC 9, BOTTLES@
      BTL   DAC 8, BOTTLE@
-     MSG2  DAC 8, OF BEER
-           DAC 8, ON THE
-           DAC 6,WALL.@
-     MSG4  DAC 8, OF BEER
-           DAC 2,.@
-     MSG6  DAC 8,TAKE ONE
-           DAC 7, DOWN, 
-           DAC 8,PASS IT
-           DAC 8,AROUND -
-           DAC 1,@
-     MSG8  DAC 8,NO MORE
-           DAC 6,BEER.@
+     MSG2  DAC 22, OF BEER ON THE WALL.@
+     MSG4  DAC 10, OF BEER.@
+     MSG6  DAC 32,TAKE ONE DOWN, PASS IT AROUND -@
+     MSG8  DAC 14,NO MORE BEER.@
+           DENDSTART

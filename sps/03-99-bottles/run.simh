@@ -13,3 +13,7 @@ go
 ;
 ; second pass
 attach ptr bottles-916.sps.pt
+go
+detach ptr
+detach ptp
+reset
