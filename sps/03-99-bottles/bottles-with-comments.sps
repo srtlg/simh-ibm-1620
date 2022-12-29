@@ -28,11 +28,11 @@
            BTM DBEERS,*+12     ,,, SHOW COUNT
            WATYMSG2            ,,, ON THE WALL
            RCTY                ,,, ZZZZZIP...
-           B7  START           ,,, DO IT AGAIN
+           B   START           ,,, DO IT AGAIN
      EMPTY WATYMSG8            ,,, NO MORE BEER
            RCTY                ,,, ZZZZIP...
            H                   ,,, STOP
-           B7  EMPTY           ,,, IN CASE RUN PUSHED
+           B   EMPTY           ,,, IN CASE RUN PUSHED
      *
      * SUBROUTINE TO DISPLAY BOTTLE COUNT AND EITHER *BOTTLE* OR *BOTTLES*
      *
@@ -45,12 +45,12 @@
            BNL DBEER2          ,,, 10 OR MORE
            WNTYBEERS           ,,, 1 DIGIT
            CM  BEERS,1         ,,, JUST 1 
-           BNE DBEERS4         ,,, NO, *BOTTLES*
+           BNE DBEER4          ,,, NO, *BOTTLES*
            WATYBTL             ,,, SAY *BOTTLE*
-           B7  -DBRET          ,,, EXIT
+           B   -DBRET          ,,, EXIT
      DBEER2WNTYBEERS-1         ,,, 2 DIGITS
      DBEER4WATYBTLS            ,,, SAY BOTTLES
-           B7  -DBRET          ,,, EXIT
+           B   -DBRET          ,,, EXIT
      BEERS DC  5,99            ,,, BOTTLE COUNT
            DC  1,@
      BTLS  DAC 9, BOTTLES@
