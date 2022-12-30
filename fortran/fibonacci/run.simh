@@ -1,0 +1,41 @@
+;
+; interrupt interpreter with C-E
+;
+! rm -f fib.f.pt fib.text?.pt
+! python ../../util/asc2pt.py fib.f fib.f.pt
+attach ptr ../../dl/DaveW_paper_tapes/FO005.PT
+boot ptr
+d sw1 1
+d sw2 0
+d sw3 0
+d sw4 0
+d arstop 0 
+attach ptr fib.f.pt
+go
+;quit
+reset
+attach ptr ../../dl/DaveW_paper_tapes/FO003AP.PT
+attach ptp fib.text1.pt
+boot ptr
+d sw1 1
+d arstop 0 
+attach ptr fib.f.pt
+go
+; print symbol table
+d sw1 0
+go
+detach ptp
+attach ptr fib.text1.pt
+attach ptp fib.text2.pt
+d sw1 0
+go
+; quit
+detach ptp
+detach ptr
+; reset
+! cat fib.text1.pt fib.text2.pt > fib.text3.pt
+set cpu history=10000
+attach ptr fib.text3.pt
+boot ptr
+attach ptr ../../dl/DaveW_paper_tapes/SP021C.PT
+go
