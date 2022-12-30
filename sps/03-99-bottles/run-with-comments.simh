@@ -20,3 +20,4 @@ reset
 attach ptr bottles-with-comments.text.pt
 boot ptr
 go
+quit

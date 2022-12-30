@@ -14,17 +14,17 @@
      * ABSOLUTELY NECESSARY (SEE NOTE BELOW).
      *
      START RCTY                ,,, RETURN CARRIAGE
-           BTM DBEERS,*+12     ,,, SHOW COUNT
+           BTM DBEERS,*        ,,, SHOW COUNT
            WATYMSG2            ,,, OF BEER ON...
            RCTY                ,,, RETURN CARR.
-           BTM DBEERS,*+12     ,,, SHOW COUNT
+           BTM DBEERS,*        ,,, SHOW COUNT
            WATYMSG4            ,,, OF BEER.
            RCTY                ,,, ZZZZIP...
            WATYMSG6            ,,, TAKE ONE DOWN
            RCTY                ,,, ZZZIP...
            SM  BEERS,1         ,,, A DEAD SOLDIER
            BZ  EMPTY           ,,, IF ALL GONE
-           BTM DBEERS,*+12     ,,, SHOW COUNT
+           BTM DBEERS,*        ,,, SHOW COUNT
            WATYMSG2            ,,, ON THE WALL
            RCTY                ,,, ZZZZZIP...
            B   START           ,,, DO IT AGAIN
@@ -46,10 +46,10 @@
            CM  BEERS,1         ,,, JUST 1 
            BNE DBEER4          ,,, NO, *BOTTLES*
            WATYBTL             ,,, SAY *BOTTLE*
-           B   -DBRET          ,,, EXIT
+           BB                  ,,, EXIT
      DBEER2WNTYBEERS-1         ,,, 2 DIGITS
      DBEER4WATYBTLS            ,,, SAY BOTTLES
-           B   -DBRET          ,,, EXIT
+           BB                  ,,, EXIT
      BEERS DC  5,99            ,,, BOTTLE COUNT
            DC  1,@
      BTLS  DAC 9, BOTTLES@
