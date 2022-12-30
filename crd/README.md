@@ -23,7 +23,7 @@ mapping is explained in `I1620/i1620_cd.c`
 - 0 → 0
 - 1~-9~ → J-R
 - 0~ → ASCII 0x5D ]
-- Record Mark (?), i.e. character in column 80 is ASCII 0x7C |
-- Group Mark (@), i.e. C84 end of string is ASCII 0x7D }
+- Record Mark (≠), i.e. character in column 80 is ASCII 0x7C |
+- Group Mark (≢ or @), i.e. C84 end of string is ASCII 0x7D }
 
 [^IO]:  IBM 1620 Input/Output Units, [Systems Reference Library A26-5707-0](A26-5707-0_IBM_1620_Input_Output_Units_1621_1622_1624.pdf)
