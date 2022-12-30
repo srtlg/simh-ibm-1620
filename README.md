@@ -7,6 +7,7 @@ bitsavers](http://bitsavers.informatik.uni-stuttgart.de/pdf/ibm/1620/general_pro
 There is at least [one comprehensive
 example](https://github.com/mdoege/IBM1620-Baseball) on Github.
 
+- [programs in machine code](crd/README.md)
 - [programs in SPS](sps/README.md)
 - [programs in FORTRAN](fortran/README.md)
 
