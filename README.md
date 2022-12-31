@@ -18,14 +18,14 @@ simh-i1620.
 ## Where to start
 
 There was no readily available documentation[^1] on how to run the assembler or
-fortran compiler from the digitized cards from bitsavers.  An my aim was to run
+fortran compiler from the digitized cards from bitsavers.  My aim was to run
 some of the application notes from bitsavers.  So let's try to understand the
 machine from the available documentation.  The machine came with a paper tape
 and a card reader.  The card reader interaction seems simpler (put the cards
 into the reader, press load) and the [biggest remaining
 library](https://youtu.be/N12pQBiRd7A) also contained shelves with punch cards.
 From a user perspective, punch cards offer an easier way of patching programs
-than papaer tape anyways.  So maybe only the assembler and compilers came on
+than paper tape anyways.  So maybe only the assembler and compilers came on
 paper tape.
 
 - reading of punch cards is described on page 30[^IO]

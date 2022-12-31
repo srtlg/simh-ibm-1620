@@ -2,12 +2,14 @@
 
 - reading of punch cards is described on page 30f[^IO]
 - 1..5 address of following instructions
-- 6.10 address of record mark
+- 6..10 address of record mark
+    - for instructions the address plus 12 times the number of instructions
 - 11..15
     + blank for instructions
     + start address of program in last card
 - 16..19 not used or sequence number
 - 20..79 data or instructions
+    + just filling unused columns with blanks works
 - 80 Record Mark
 
 A card sequence consists of
@@ -19,10 +21,10 @@ A card sequence consists of
 It is entirely possible to write those files in a text editor.  The
 mapping is explained in `I1620/i1620_cd.c`
 
-- 1-9 → 1-9
+- 1–9 → 1–9
 - 0 → 0
-- 1~-9~ → J-R
-- 0~ → ASCII 0x5D ]
+- 1̅–9̅ → J–R
+- 0̅ → ASCII 0x5D ]
 - Record Mark (≠), i.e. character in column 80 is ASCII 0x7C |
 - Group Mark (≢ or @), i.e. C84 end of string is ASCII 0x7D }
 
