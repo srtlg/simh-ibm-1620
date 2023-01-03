@@ -17,6 +17,8 @@ according to the manual[^SPS]
 - a newline cannot by until column 16 for `util/asc2pt.py`
 - page and line numbers are optional, but the columns have to blank, if unused
 
+There is a [Vim syntax](ibm1620-sps.vim) for it.
+
 
 ## Available Assemblers in [1620.zip]
 

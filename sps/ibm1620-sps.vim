@@ -120,4 +120,4 @@ highlight def link spsMnemonicSp Statement
 highlight def link spsDeclara  Macro
 highlight def link spsControl  Macro
 
-let b:current_syntax = "ibm-sps"
+let b:current_syntax = "ibm1620-sps"
