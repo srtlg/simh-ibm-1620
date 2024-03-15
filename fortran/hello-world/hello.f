@@ -1,0 +1,4 @@
+      I=1
+      TYPE 13,I
+   13 FORMAT(12HHELLO WORLD I3)
+      END

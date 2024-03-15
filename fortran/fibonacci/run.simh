@@ -22,7 +22,7 @@ d arstop 0
 attach ptr fib.f.pt
 go
 ; print symbol table
-d sw1 0
+d sw1 1
 go
 detach ptp
 attach ptr fib.text1.pt
@@ -37,5 +37,7 @@ detach ptr
 set cpu history=10000
 attach ptr fib.text3.pt
 boot ptr
-attach ptr ../../dl/DaveW_paper_tapes/SP021C.PT
+attach ptr ../../dl/DaveW_paper_tapes/FO003CP.PT
 go
+go
+quit

@@ -23,7 +23,7 @@ d sw1 1
 d arstop 0 
 attach ptr tic.start7th.f.pt
 go
-d sw1 1
+d sw1 0
 go
 detach ptp
 attach ptr tic.start7th.run1.pt
@@ -36,3 +36,6 @@ detach ptr
 reset
 attach ptr tic.start7th.text.pt
 boot ptr
+go
+attach ptr ../../dl/DaveW_paper_tapes/FO003CP.PT
+go

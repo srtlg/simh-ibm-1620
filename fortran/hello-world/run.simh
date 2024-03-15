@@ -1,0 +1,31 @@
+;
+; interrupt interpreter with C-E
+;
+! rm -f hello.f.pt hello.text?.pt
+! python ../../util/asc2pt.py hello.f hello.f.pt
+attach ptr ../../dl/DaveW_paper_tapes/FO003AP.PT
+attach ptp hello.text1.pt
+boot ptr
+d sw1 1
+d arstop 0 
+attach ptr hello.f.pt
+go
+; print symbol table
+d sw1 1
+go
+detach ptp
+attach ptr hello.text1.pt
+attach ptp hello.text2.pt
+d sw1 0
+go
+detach ptp
+detach ptr
+reset
+! cat hello.text1.pt hello.text2.pt > hello.text3.pt
+set cpu history=10000
+attach ptr hello.text3.pt
+boot ptr
+attach ptr ../../dl/DaveW_paper_tapes/FO003CP.PT
+go
+go
+quit
