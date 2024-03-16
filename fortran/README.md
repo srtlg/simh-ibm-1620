@@ -26,13 +26,13 @@ Vim's fortran mode starts in column 9, but in IBM Fortran[^FORTRAN]:
 
 `FO-003A` is the compiler (processor in IBM parlance) for paper tape
 
-`FO-003C` contain the subroutines for paper tape
+`FO-003C` contains the subroutines for paper tape
 
 `FO-005` is the pre-compiler for paper tape
 
 ## What to do after the two compiler runs?
 
-You have to concatenate both paper tape, then you can run it, if you'd have
+You have to concatenate both paper tapes, then you can run it, if you'd have
 a tape with the subroutines (seem to be mainly floating point functions).
 
 
